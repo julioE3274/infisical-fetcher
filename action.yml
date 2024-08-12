@@ -1,4 +1,8 @@
 name: 'Infisical Secret Fetcher'
+author: 'Julio Suarez'
+branding:
+  color: 'blue'
+  icon: 'archive'
 description: 'Retrieve environment variables using the Infisical CLI'
 inputs:
   project:
