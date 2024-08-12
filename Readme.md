@@ -20,8 +20,8 @@ Using a Token for authentication and creating the `.env` in the root:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Infisical Secrets
-        uses: Infisical Secret Fetcher
+      - name: Infisical Secret Fetcher
+        uses: julioE3274/infisical-fetcher@v0.0.1
         with:
           token: ${{ secrets.INFISICAL_TOKEN }}
           project: 'xxx-project-id-xxx'
@@ -33,8 +33,8 @@ Using clientId and secret for authentication and creating the `.env.staging` in 
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Infisical Secrets
-        uses: Infisical Secret Fetcher
+      - name: Infisical Secret Fetcher
+        uses: julioE3274/infisical-fetcher@v0.0.1
         with:
           client: ${{ secrets.INFISICAL_CLIENT_ID }}
           secret: ${{ secrets.INFISICAL_CLIENT_SECRET }}
