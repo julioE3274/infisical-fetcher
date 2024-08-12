@@ -1,0 +1,28 @@
+name: 'Infisical Secret Fetcher'
+description: 'Retrieve environment variables using the Infisical CLI'
+inputs:
+  project:
+    description: 'Project ID from which to fetch the environment variables'
+    required: true
+  token:
+    description: 'Authentication token for Infisical (optional if using client ID and secret)'
+    required: false
+  client:
+    description: 'Client ID for authentication if the token is not provided'
+    required: false
+  secret:
+    description: 'Secret key for authentication if the token is not provided'
+    required: false
+  path:
+    description: 'Path within the Infisical project to fetch the environment variables'
+    required: false
+  output:
+    description: 'File path to save the fetched environment variables (defaults to .env)'
+    required: false
+    default: '.env'
+outputs:
+  env:
+    description: 'Fetched environment variables'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
